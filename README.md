@@ -1,32 +1,13 @@
-## Welcome to GitHub Pages
+## Nuclei Segmentation using Spatial Raman Spectroscopy
 
 You can use the [editor on GitHub](https://github.com/tsorenso/raman-segmentation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Project Overview
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+For this project, I will investigate the use of spatial Raman spectroscopy in segmenting images of nuclei.  Raman spectroscopy is a technique that has previously been used in identifying chemical compounds and is now being explored in molecular biology as a way of classifying cells by their cell-type or cell-state. Because Raman spectra taken at a single-cell level have been useful for identifying cell-type, it's natural to assume they may also be used to segment an image, differentiating the foreground from the background. Being able to segment cells with spatial Raman spectra -- as opposed to traditional RBG images -- would be monumental to the field of computer vision.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
