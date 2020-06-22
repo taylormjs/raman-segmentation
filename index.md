@@ -1,4 +1,8 @@
 ## Nuclei Segmentation using Spatial Raman Spectroscopy
+---
+title: "Index"
+nav_include: 1
+---
 
 
 ### Project Overview
