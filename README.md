@@ -1,4 +1,4 @@
-## Nuclei Segmentation using Spatial Raman Spectroscopy Hailey was HERE
+## Nuclei Segmentation using Spatial Raman Spectroscopy Hailey was HERE 
 
 
 ### Project Overview
