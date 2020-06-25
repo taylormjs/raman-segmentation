@@ -1,0 +1,12 @@
+<div class="nav">
+<nav>
+  <ul>
+    <li><a href="index.html" id="intro">Home</a></li>
+    <li><a href="about.html" id="abt">About</a></li>
+
+..etc..
+
+  </ul>
+  </nav>
+</div>
+</html>
