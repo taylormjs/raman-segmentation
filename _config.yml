@@ -1,3 +1,4 @@
 theme: jekyll-theme-slate
 title: raman-nuclei-segmentation
 description: Improved nuclei segmentation using Raman spectroscopy
+baseurl: /raman-segmentation
