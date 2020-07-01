@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-nav_include: 2
+permalink: /
 ---
 
 ### Overview
