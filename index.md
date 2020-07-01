@@ -1,6 +1,6 @@
 ---
 title: "Index"
-nav_include: 1
+permalink: /
 ---
 
 
