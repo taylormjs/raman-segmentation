@@ -1,3 +1,7 @@
+---
+permalink: /
+---
+
 ## Nuclei Segmentation using Spatial Raman Spectroscopy Merged
 
 
