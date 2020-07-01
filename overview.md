@@ -1,6 +1,5 @@
 ---
 title: "Overview"
-permalink: /
 ---
 
 ### Overview
