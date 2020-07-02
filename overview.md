@@ -3,6 +3,11 @@ layout: default
 title: "Overview"
 ---
 
+
+<img src="images/mapped_img_patch_cnn.png">
+
+
+
 ### Overview
 Raman spectroscopy has been shown to be a non-destructive, label-free method for determining molecular composition.  A Raman spectra can be taken of each pixel in a microscopic image, representing a high-dimensional spatial tensor that may be useful in extracting meaningful biological signal.  In this project, I will explore the use of Spatial Raman spectra in segmenting images of nuclei, distinguishing individual cells from their backgrounds. I compare several pre-processing methods and standard classifiers in distinguishing foreground from background as well as map foreground probability predictions to a 2D image, generating a segmentation map. Additionally, I will create and test a convolutional neural network based on Raman tensor patches for image segmentation.
 
