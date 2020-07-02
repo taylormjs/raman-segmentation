@@ -4,7 +4,11 @@ title: "index"
 ---
 
 ### Contents
-[Project Overview] (overview.md)
+[Raman Segmentation] (overview.md)
+[Dataset] (dataset.md)
+[Background on Raman Spectroscopy] (background.md)
+[Code for this project] (code.md)
+[Acknowledgements] (thanks.md)
 
 
 ### Project Overview
