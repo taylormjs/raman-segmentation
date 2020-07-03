@@ -4,62 +4,25 @@ title: "Overview"
 ---
 
 
-<img src="images/mapped_img_patch_cnn.png">
-
-
-
 ### Overview
 Raman spectroscopy has been shown to be a non-destructive, label-free method for determining molecular composition.  A Raman spectra can be taken of each pixel in a microscopic image, representing a high-dimensional spatial tensor that may be useful in extracting meaningful biological signal.  In this project, I will explore the use of Spatial Raman spectra in segmenting images of nuclei, distinguishing individual cells from their backgrounds. I compare several pre-processing methods and standard classifiers in distinguishing foreground from background as well as map foreground probability predictions to a 2D image, generating a segmentation map. Additionally, I will create and test a convolutional neural network based on Raman tensor patches for image segmentation.
+
+
+
+<img src="images/mapped_img_patch_cnn.png">
+
 
 
 ### Motivation
 Image  segmentation  is  a  common  problem  in  ComputerVision  with  widespread  applications.  In  the  field  of  biology,segmentation  has  already  been  used  to  segment  images  ofentire  cells  as  well  as  cellular  sub-components  (e.g.  nuclei).[1], [2],  The quality of a segmentation algorithm, however, ishighly  dependant  on  the  quality  of  the  images  in  the  dataset[site],  preventing  most  neural-network  based  segmentationmethods from identifying and segmenting objects better thanthe  human  eye.  In  other  words,  if  a  human  cannot  detect  anobject  in  an  image,  it’s  unlikely  that  any  object-detection  orsegmentation  algorithm  will  be  able  to  either.  Images  that contain a large amount of noise may mask objects, preventing the  object  from  being  detected  or  segmented.  In  the  case  of segmenting  images  of  nuclei,  there  may  be  a  high  amountof  auto-fluorescence  from  the  microscope  used  to  gather  thei mage,  creating  noise  that  can  mask  cells,  preventing  them from being detected. For  this  project,  I  will  investigate  the  potential  use  of spatial  Raman  spectroscopy  in  segmenting  images  of  nuclei. 
 
 
-\begin{abstract}
-Raman spectroscopy has been shown to be a non-destructive, label-free method for determining molecular composition.  A Raman spectra can be taken of each pixel in a microscopic image, representing a high-dimensional spatial tensor that may be useful in extracting meaningful biological signal.  In this project, I will explore the use of Spatial Raman spectra in segmenting images of nuclei, distinguishing individual cells from their backgrounds. I compare several pre-processing methods and standard classifiers in distinguishing foreground from background as well as map foreground probability predictions to a 2D image, generating a segmentation map. Additionally, I will create and test a convolutional neural network based on Raman tensor patches for image segmentation.
-\end{abstract}
-\begin{IEEEkeywords}
-image segmentation, raman spectroscopy
-\end{IEEEkeywords}
-
-\section{Introduction}
-% Here we have the typical use of a "W" for an initial drop letter
-% and "RITE" in caps to complete the first word.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-Image segmentation is a common problem in Computer Vision with widespread applications.  In the field of biology, segmentation has already been used to segment images of entire cells as well as cellular sub-components (e.g. nuclei). \cite{soliman_cellprofiler_2015}, \cite{hollandi_nucleaizer_2020}, \cite{}  The quality of a segmentation algorithm, however, is highly dependant on the quality of the images in the dataset [site], preventing most neural-network based segmentation methods from identifying and segmenting objects better than the human eye. In other words, if a human cannot detect an object in an image, it's unlikely that any object-detection or segmentation algorithm will be able to either.  Images that contain a large amount of noise may mask objects, preventing the object from being detected or segmented. In the case of segmenting images of nuclei, there may be a high amount of auto-fluorescence from the microscope used to gather the image, creating noise that can mask cells, preventing them from being detected.  \\
-
-If images end up noisy, it may be possible to simply re-take the images or apply a filter to remove noise. \cite{fan_brief_2019}  Yet if the image is taken during an experimental setting, it's often impossible to re-capture an image at a given time-point or to remove noise to allow for objection detection. This usually creates the need for experiments to be completely repeated or for valuable data to be removed from a dataset, potentially precluding an experimentalist from making a discovery.  It may be possible to recover information from the image from other modalities collected at the time of the experiment, but little work has been done to investigate other modalities that could recover the content in an image \cite{elharrouss_image_2020}. \\
-
-For this project, I will investigate the potential use of spatial Raman spectroscopy in segmenting images of nuclei.  Raman spectroscopy is a technique that has previously been used in identifying chemical compounds and is now being explored in molecular biology as a way of classifying cells by their cell-type or cell-state. \cite{kobayashi-kirschvink_linear_2018} \cite{germond_raman_2018}. Because Raman spectra taken at a single-cell level have been useful for identifying cell-type, it's natural to assume they may also be used to segment an image, differentiating the foreground from the background.  It's important to note that spatial Raman spectroscopy contains entirely different information than does a spatial image. While an image may be considered a order three tensor containing three channels (RGB), spatial Raman spectroscopy is an order three tensor containing, in this experiment, 1,340 features for each pixel. These feature represent discrete levels of energy shifts of photons that undergo inelastic collisions, or Raman scattering.  Being able to segment cells with spatial Raman spectra would be monumental to the field of computer vision. \\
-
-I will show results for the following aims:\\
-
-\begin{enumerate}
-\item Comparing several data pre-processing methods in classifying raman spectra (pixels) as either belonging to nuclei or background
-\item Comparing the segmentation performance of a neural network with a linear method (logistic regression) and an ensemble method (random forests)
-\item Implementing a neural network that considers a raman spectra and its closest neighbors in classifying foreground from background
-\item Comparing the performance of these methods with a state-of-the-art image-segmentation method\\
-\end{enumerate}
-
-\begin{figure*}[h]
-\includegraphics[width=15cm]{f1_scores.png}
-\centering
-\caption{Test Accuracies and F1 scores across different classification methods and class-balancing methods}
-\label{f1_score}
-\end{figure*}
 
 
 \section{Results}
 
-\subsection{Down-sampling prior to classification outperforms Up-sampling}
-\begin{figure*}[t]
-\includegraphics[width=15cm]{roc_curves.png}
-\centering
-\caption{Figures A-C show ROC curves from three different classifiers using up-sampling as a class balancing method prior to classification. Figures D-F show these same classifiers trained and tested with data balanced via down-sampling}
-\label{roc_curves}
-\end{figure*}
+<img src="images/roc_curves.png">
+
 
 One main challenge in distinguishing foreground from foreground comes from a large imbalance between the two classes -- there are far greater cell labels than background labels. This is true because the "ground truth" cell labels were generated using a state-of-the art image segmentation method. However, the background spectra were entirely created by hand by one of my collaborators. Due to the labor intensity of generating more background spectra by hand, I explored using Down-sampling and Up-sampling as methods to balance the two classes prior to classifying raman spectra as foreground or background. See \ref{downsample} and \ref{upsample} in the Method Section for more details on the implementations of each. \\
 
