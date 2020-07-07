@@ -4,6 +4,7 @@ title: "Acknowledgements"
 id: thanks
 ---
 
+### Acknowlegements
 
 I'm very grateful for Professor Gilbert Strang for teaching this course and for being so kind as we've had to adjust to different style of learning during the pandemic. This course was extremely useful for my understanding of Linear Algebra and Machine Learning. I'll continue to come back to this course again and again throughout my education and career. 
 
