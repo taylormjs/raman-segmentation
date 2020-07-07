@@ -5,7 +5,7 @@ title: "Background"
 ---
 
 
-<img src="images/Jablonski-Diagram-1.png" width="750"/>
+<img src="images/Jablonski-Diagram-1.png" width="500"/>
 
 
 ### Background on Raman spectroscopy
