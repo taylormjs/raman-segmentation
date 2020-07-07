@@ -23,7 +23,7 @@ One main challenge in distinguishing foreground from foreground comes from a lar
 The table above shows accuracies and f1-scores of three different classification methods using two different times of class balancing -- either Up-sampling or Down-sampling. Each of the classifiers perform very poorly on the dataset balanced through up-sampling, performing at or slightly better than a classifier that assigns labels randomly. In stark contrast, the classifiers trained on the dataset balanced through down-sampling perform significantly better, all with accuracies above 70\%. 
 
 
-<img src="images/roc_curves.png" width="500">
+<img src="images/roc_curves.png" width="700"/>
 
 
 #### None of the three basic models can segment the test spatial raman spectra near the same level as a state-of-the art model
@@ -32,7 +32,7 @@ Following class-balancing, three basic methods were used to predict whether a Ra
 Despite the dominance of Logistic Regression, none of the three models were able to segment any image with the same quality as the state-of-the-art model. Further thinking was needed to improve performance. 
 
 
-<img src="images/mapped_img_down.png">
+<img src="images/mapped_img_down.png" width="700"/>
 
 
 #### CNN based on tensor patches is superior to basic Models but does not rival state-of-the-art method} 
