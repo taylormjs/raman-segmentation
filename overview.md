@@ -41,7 +41,7 @@ A Convolutional Neural Network that takes into account each Raman spectra's neig
 The trained model was also used to generate segmentations of entire images that were not found in either the train or validation sets.  The first figure on this page shows the performance of this model on 10 randomly-selected images, as compared with an image taken of the same spatial location and the state-of-the-art segmentation method. This model much more effectively captured nuclei and background than three basic models and even rivals the state-of-the-art segmentation method on some of the images.
 
 
-<img src="images/patch_cnn_roc.png" width="200"/>
+<img src="images/patch_cnn_roc.png" width="500"/>
 
 
 ### Discussion and Summary
