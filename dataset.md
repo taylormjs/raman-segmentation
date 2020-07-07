@@ -3,7 +3,7 @@ layout: default
 title: "dataset"
 ---
 
-<img src="images/raman_mic_photo.jpeg" width="750"/>
+<img src="images/raman_mic_photo.jpeg" width="400"/>
 
 
 ### Dataset
