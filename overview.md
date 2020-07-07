@@ -3,7 +3,7 @@ layout: default
 title: "Overview"
 ---
 
-<img src="images/mapped_img_patch_cnn.png">
+<img src="images/mapped_img_patch_cnn.png" width="600"/>
 
 
 ### Overview
@@ -14,7 +14,7 @@ Raman spectroscopy has been shown to be a non-destructive, label-free method for
 Image  segmentation  is  a  common  problem  in  Computer Vision  with  widespread  applications.  In  the  field  of  biology, segmentation  has  already  been  used  to  segment  images  of entire  cells  as  well  as  cellular  sub-components  (e.g.  nuclei).  The quality of a segmentation algorithm, however, is highly  dependant  on  the  quality  of  the  images  in  the  dataset,  preventing  most  neural-network  based  segmentation methods from identifying and segmenting objects better thanthe  human  eye.  Images  that contain a large amount of noise may mask objects, preventing the  object  from  being  detected  or  segmented.  In  the  case  of segmenting  images  of  nuclei,  there  may  be  a  high  amountof  auto-fluorescence  from  the  microscope  used  to  gather  the image,  creating  noise  that  can  mask  cells,  preventing  them from being detected. For  this  project,  I  will  investigate  the  potential  use  of spatial  Raman  spectroscopy to overcome the problem of low-quality images.
 
 
-<img src="images/f1_scores.png">
+<img src="images/f1_scores.png" width="600"/>
 
 
 ### Results
@@ -23,7 +23,7 @@ One main challenge in distinguishing foreground from foreground comes from a lar
 The table above shows accuracies and f1-scores of three different classification methods using two different times of class balancing -- either Up-sampling or Down-sampling. Each of the classifiers perform very poorly on the dataset balanced through up-sampling, performing at or slightly better than a classifier that assigns labels randomly. In stark contrast, the classifiers trained on the dataset balanced through down-sampling perform significantly better, all with accuracies above 70\%. 
 
 
-<img src="images/roc_curves.png">
+<img src="images/roc_curves.png" width="500">
 
 
 #### None of the three basic models can segment the test spatial raman spectra near the same level as a state-of-the art model
